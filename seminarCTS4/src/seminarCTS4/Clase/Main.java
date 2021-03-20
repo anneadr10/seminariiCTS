@@ -1,6 +1,7 @@
 package seminarCTS4.Clase;
 
 import seminarCTS4.Clase.Parlament;
+import seminarCTS4.Clase.Imprimanta;
 
 public class Main {
 
@@ -26,6 +27,13 @@ public class Main {
 		ParlamentLazy parlamentLazy2= ParlamentLazy.getInstance("UK", 500,2,"Sediul UK");
 		System.out.println(parlamentLazy.toString());
 		System.out.println(parlamentLazy2.toString());
+		
+        Imprimanta imprimanta= Imprimanta.getInstance("HP", 4000,(float) 100.50);
+		
+		Imprimanta imprimanta2= Imprimanta.getInstance("Samsung", 3000,(float) 200.99);
+		System.out.println(imprimanta.toString());
+		System.out.println(imprimanta2.toString());
+		
 	}
 
 }
