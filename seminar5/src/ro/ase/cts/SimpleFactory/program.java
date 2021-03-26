@@ -1,5 +1,7 @@
 package ro.ase.cts.SimpleFactory;
 
+import ro.ase.cts.SimpleFactory.PersonalSpital;
+
 public class program {
 
 	public static void main(String[] args) {
