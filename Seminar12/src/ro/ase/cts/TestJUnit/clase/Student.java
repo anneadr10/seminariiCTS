@@ -31,13 +31,19 @@ public class Student {
 	    }
 
 	    public void adaugaNota(int nota){
-	        note.add(nota);
+	    	if(nota>=1 && nota <=10) {
+	    		note.add(nota);
+	    	}
+	    	else {
+	    		 throw new IllegalArgumentException();
+	    	}
 	    }
 
 	    public int getNota(int index){
 	        if(index>=0 && index< note.size()){
 	            return note.get(index);
 	        }
+	        
 	        throw new IndexOutOfBoundsException();
 	    }
 
@@ -49,15 +55,18 @@ public class Student {
 	        if(note.size()>0){
 	            return suma/note.size();
 	        }
-	        return suma;
+	        else{
+	        	throw new IllegalArgumentException();
+	        }
+	       
 	    }
 	    
 	    public boolean areRestante() {
 	    	for(int nota:note) {
 	    		if(nota<5) {
-	    			return false;
+	    			return true;
 	    		}
 	    	}
-	    	return true;
+	    	return false;
 	    }
 }
